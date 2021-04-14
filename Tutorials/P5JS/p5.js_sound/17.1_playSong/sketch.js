@@ -5,14 +5,14 @@
 
 var song;
 var sliderRate;
-var sliderPan;
+//var sliderPan;
 
 function setup() {
   createCanvas(200, 200);
   song = loadSound('rainbow.mp3', loaded);
   song.setVolume(0.5);
   sliderRate = createSlider(0, 1.5, 1, 0.01);
-  sliderPan = createSlider(-1, 1, 0, 0.01);
+  //sliderPan = createSlider(-1, 1, 0, 0.01);
 }
 
 function loaded() {
@@ -21,6 +21,6 @@ function loaded() {
 
 function draw() {
   background(random(255));
-  song.pan(sliderPan.value());
+  //song.pan(sliderPan.value());
   song.rate(sliderRate.value());
 }
